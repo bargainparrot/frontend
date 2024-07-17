@@ -66,10 +66,16 @@
   --font-size-4: var(--spacing-4);
   --font-size-5: var(--spacing-5);
   --font-size-6: var(--spacing-6);
+
+  --breakpoint-xs: 576px;
+  --breakpoint-sm: 768px;
+  --breakpoint-md: 1024px;
+  --breakpoint-lg: 1200px;
+  --breakpoint-xl: 1440px;
 }
 
 /* Media Queries */
-@media (min-width: 576px) {
+@media (min-width: var(--breakpoint-xs)) {
   :root {
     --base-spacing: 1.1rem; /* Adjusted base unit for small screens */
     --spacing-1: 1.1rem;
@@ -227,9 +233,9 @@ ol[role="list"] {
 }
 
 .container {
-  padding-inline: 2em;
   margin-inline: auto;
-  max-width: 80rem;
+  width: 90%;
+  max-width: 85rem;
 }
 
 .sr-only {
@@ -619,4 +625,42 @@ p {
   .bx {
     color: #fff;
   }
+}
+
+/******************* Card Styles ******************/
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  color: var(--clr-text);
+  padding: 1rem;
+}
+
+/************ Modal Styles ***************/
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }

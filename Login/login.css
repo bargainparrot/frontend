@@ -1,0 +1,83 @@
+/*The closing icon style*/
+.close{
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+}
+.close img{
+  color: var(--clr-primary-400);
+}
+/*The heading styl*/
+.about{
+  background-color: var(--clr-secondary-100);
+  border-radius: 5px;
+  margin:20px;
+  padding:15px;
+  border:2px solid var(--clr-primary-100);
+}
+.about h3{
+  color:var(--clr-primary-100);
+  text-align: center;
+}
+.heading h2{
+color: var(--clr-neutral-500);
+}
+
+/*The main body styl*/
+.main{
+  margin: 20px;
+  
+  border-radius: 5px;
+  padding:15px;
+  margin:10px;
+}
+.heading h2{
+font-size: var(--fs-600);
+font-family: var( --ff-secondary);
+}
+.heading p{
+color:var( --clr-neutral-500);
+font-size: var( --fs-400);
+}
+.heading p span{
+  color: var(--clr-primary-400);
+  font-size: var( --fs-400);
+  font-weight: var(--fw-medium);
+}
+.socials{
+  display: flex;
+  padding: 30px 0px;
+  
+}
+.google{
+    border:2px solid var(--clr-secondary-300);
+    padding:5px 50px 5px 50px;
+    border-radius: 5px;
+    margin-right:20px;
+
+}
+.facebook{
+    border:2px solid blue;
+      padding:5px 50px 5px 50px;
+    border-radius: 5px;
+     margin-right:20px;
+}
+.apple{
+  border:2px solid var( --clr-neutral-700);
+    padding:5px 50px 5px 50px;
+    border-radius: 5px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+form input{
+  height: 50px;
+  margin-bottom: 20px;
+}
+.mail{
+  background-color: whitesmoke;
+  border-radius: 5px;
+ 
+}

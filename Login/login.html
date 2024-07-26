@@ -19,16 +19,11 @@
     <link rel="stylesheet" href="./login.css">
     </head>
   <body>
-    <div class="close">
+    <div class="container">
+    <div class="main">
+      <div class="close">
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAgBJREFUSEu11UuojlEUBuDnjFASUZJyG7hEKEPXiXIZYaCkDChGUsrINWODkyKGZGIgA6WUXDOSZCAkl6IkRSly963af/a/7e//zzl11uzb31rrXet91157wCjbwCjn1w9gDLZgHZZgFv7gFR7iKi7hR1uhvQDW41RK2qvR59iD6zWnNoCjTaVHhkHfbxzAiTKmBnAMh4eRPHfdh8H8oATYiCsjTB5h0clK3OvkyAHG4xmmVQA+NpVNKs5rZ+HytBF+Mb7HRw4QQp2uJA+6LuA2pqf/b7EKO1ro3ITLJUBQExTl9rVxXJo6m4Nb6Wckf4m5eIQY59zOYncJ8CarMHd+hzWp9dmJ59dYgBtN11MrXT/AshLgC8a1CPwBKxJIuCxsQG9iSov/p45muQafEULXrASYh7s9ACLXhLKDJ4jA0t43VKxG/I9VERarIii6g8mVmMepy64piknZVjh/wyLEOojkkTAs6Aod5qedVIp8Lk1YF8B2nK9U0zamy7EThyoxW3GxpCgEDhpmVAJqlyqEnFjxjcsaFy26/29dr8W1FqGHchyrIka6Q2X1PTiI40PJVvHZ24h+Mj9vW9fBa2zVfg9SJ9cv7C83aY2iHDzWxpmW2537xYTtytZIV2P9Khzb7JrN2JCEm5mezBe4n/SKpfazjdJ+ACOU4l/YqAP8BfGTXRkJ43i2AAAAAElFTkSuQmCC"/>
     </div>
-    <div class="about">
-      <h3>
-        Sign in to save this item on your wishlist
-      </h3>
-    </div>
-
-    <div class="main">
     <div class="heading">
       <h2>Log into Your Account</h2>
       <p>Don't have an account? <span>Sign up</span></p>
@@ -49,16 +44,26 @@
 
     <div>
       <form action="">
-        <input type="text" placeholder="Email Address" class="mail">
+        <div class="input-field">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAUlJREFUSEvd1T8ohWEUx/GPJIPBZJBSMmCwW2xGpbBSNmVSBhbJRCmTsilWfxaZbBYzA5OQMpgMBsmfe/S8um73ute93eWe5an3vM/5nt/vvM/zNqlzNNW5vsYCjGEN/TXadoUFnESdfIse0FVj8Wz7DXoLAZ8pO4DrKkGhPhT81M5XkAFeMI3Df0LGsYu2coCs7gYW8V4G1JxmF77nx3fzxRTMYButOMMEnkpAOnCAYbxiFjvlFAR0EMfoxiNC/nkBZCjZ2Il7jOaauURmdUkFmap27GMEb5jHVoLMYRMtOMVkLv+cchUDMgtXsJw276V1Kq2RW83rOh7/C5C5EipCTaiKiG6j6+i+MKoCRJEeHOXUfKSZ3JYYfNWASo9FAwPu0ndfqRV/vRfziZn9OslxXa+jr0bCRe5ULxW7rmusW3x7Y/0y62LRF2qEQhkl8rgIAAAAAElFTkSuQmCC"/>
+           <input type="text" placeholder="Email Address" class="email">
+        </div>
+        <div class ="input-field">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAASdJREFUSEvd1cEqRUEcx/HP9QqSpJQotl5Bws5G3kFZyUY2xIIsrHgHKztFeQULGyuiJAt5A2E0t45zz7lzz7lOyaym85/5fef///9mTkvDo9Wwvl4By1jFbDzQFY5xljpgL4BDbJQIbWOnGyQFWMFpFNjFSZyvYSvOF3BZBkkBrjGDdRzlRAJgDxdYrAt4x8BXvYfwmhMZwTPeMFgX8BE3lmWaiiddlBJIxQsBS9jHdMqCufhtdNt59ntR6k8YrSjeXn6PiRQgmXYJvHBfUQb/F9BufsgwPB0/mom+S/SC4Vj/jmb+BiCIjkfAHSZzze47g/n47gTdOYQnOzv6BgSxbg77O4BHjNW8yQ+ZPn1LFF20YMcDTFWE3GAzb9/UD6cio3N544BPCxY8Gbh0OQIAAAAASUVORK5CYII="/>
         <input type="password" placeholder="Password">
-        <input type="radio">
-      </form>
-      <button class="btn">
+         </div>
+         <div class="confirm">
+        <div class="tick"><input type="checkbox"> <p>Remember Me</p></div>
+        <p><a href="#"> Forgot Password</a></p>
+        </div>
+         <button class="btn-field">
           Login
         </button>
-
+      </form>
     </div>
     </div>
-    
+     </div>
+     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
   </body>
 </html>

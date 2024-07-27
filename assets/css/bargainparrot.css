@@ -464,7 +464,7 @@ ol[role="list"] {
   padding-inline: 15px;
 }
 
-.wishlist-empty {
+.user-empty {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -474,7 +474,6 @@ ol[role="list"] {
   max-width: 35rem;
   width: 100%;
   margin-inline: auto;
-  padding-block: 2rem;
   color: #6d6d6d;
 
   h4 {
@@ -484,5 +483,10 @@ ol[role="list"] {
 
   p {
     font-size: 0.875rem;
+  }
+
+  button {
+    width: 15rem;
+    font-weight: 600;
   }
 }

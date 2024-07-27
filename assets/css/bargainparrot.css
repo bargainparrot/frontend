@@ -321,6 +321,7 @@ ol[role="list"] {
   gap: 1.5rem;
   display: flex;
   flex-direction: column;
+  min-height: 20rem;
 }
 
 .wishlist-card {
@@ -394,4 +395,71 @@ ol[role="list"] {
 
 .wishlist-sales-price {
   font-size: 1.5rem;
+}
+
+/***************** WALLET   **************/
+
+.wallet-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  padding-block: 1rem;
+  padding-inline: 1.5rem;
+  gap: 2rem;
+  border: 1px solid #dfe2e6;
+}
+
+.wallet-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-hidden-figs {
+  display: flex;
+  gap: 5px;
+  span {
+    display: block;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+  }
+}
+
+.card-figs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #6d6d6d;
+}
+
+.card-position {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6d6d6d;
+}
+
+.wallet-delete-btn {
+  color: var(--clr-primary-300);
+  font-weight: 600;
+  border: none;
+  font-size: 1.12rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.wallet-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card-add-btn {
+  padding-block: 5px;
+  padding-inline: 15px;
 }

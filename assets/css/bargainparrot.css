@@ -1,65 +1,397 @@
-.nav-input-container {
-    display: flex;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    border-bottom: 1px solid #ddd;
-    border-radius: 15px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-
-    input {
-        border: none;
-        outline: none;
-        box-shadow: none;
-        flex: 1;
-        background-color: transparent;
-        padding-left: 0.5rem;
-    }
-
-    input:focus {
-        outline: none;
-        box-shadow: none;
-    }
-
-    input::placeholder {
-        color: #999;
-    }
-    
-    .search-icon {
-        color: #999;
-    }
-
-
-    .uk-flag {
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
-        border-radius: 50%;
-    }
-
-    .dropdown-toggle::after {
-        display: none;
-    }
+html {
+  box-sizing: border-box;
 }
 
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --clr-primary-100: hsl(15, 97%, 70%);
+  --clr-primary-200: hsl(15, 98%, 60%);
+  --clr-primary-300: hsl(15, 100%, 49%);
+  --clr-primary-400: hsl(15, 100%, 40%);
+  --clr-primary-500: hsl(15, 100%, 30%);
+  --clr-primary-600: hsl(15, 100%, 20%);
 
-.icon-button {
-    background-color: #FFC75F;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  --clr-secondary-100: hsl(39, 100%, 81%);
+  --clr-secondary-200: hsl(39, 100%, 74%);
+  --clr-secondary-300: hsl(39, 100%, 68%);
+  --clr-secondary-400: hsl(39, 63%, 56%);
+  --clr-secondary-500: hsl(39, 52%, 45%);
+  --clr-secondary-600: hsl(39, 57%, 33%);
+
+  --clr-neutral-300: hsl(0, 0%, 100%);
+  --clr-neutral-400: hsl(270, 9%, 17%);
+  --clr-neutral-500: hsl(0, 0%, 43%);
+  --clr-neutral-600: hsl(0, 0%, 98%);
+  --clr-neutral-700: hsl(0, 0%, 0%);
+
+  --clr-text: hsl(0, 0%, 43%);
+  --clr-surface: hsl(0, 0%, 100%);
+
+  --clr-success-100: rgb(217, 242, 239);
+  --clr-success-200: rgb(176, 228, 221);
+  --clr-success-300: rgb(0, 169, 145);
+  --clr-success-400: rgb(0, 152, 131);
+  --clr-success-500: rgb(0, 135, 116);
+  --clr-success-600: rgb(0, 127, 109);
+  --clr-success-700: rgb(0, 101, 87);
+
+  --clr-error-50: hsl(0, 100%, 95%);
+  --clr-error-75: rgb(255, 150, 150);
+  --clr-error-100: rgb(255, 107, 107);
+  --clr-error-200: rgb(255, 43, 43);
+  --clr-error-300: rgb(255, 0, 0);
+  --clr-error-400: rgb(179, 0, 0);
+  --clr-error-500: rgb(156, 0, 0);
+
+  --ff-base: "Fira Sans", sans-serif;
+  --ff-secondary: "Sora", sans-serif;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+
+  --base-spacing: 1rem;
+  --spacing-1: 1rem;
+  --spacing-2: 1.25rem;
+  --spacing-3: 1.5625rem;
+  --spacing-4: 1.953125rem;
+  --spacing-5: 2.44140625rem;
+  --spacing-6: 3.0517578125rem;
+
+  --font-size-1: var(--spacing-1);
+  --font-size-2: var(--spacing-2);
+  --font-size-3: var(--spacing-3);
+  --font-size-4: var(--spacing-4);
+  --font-size-5: var(--spacing-5);
+  --font-size-6: var(--spacing-6);
+
+  --breakpoint-xs: 576px;
+  --breakpoint-sm: 768px;
+  --breakpoint-md: 1024px;
+  --breakpoint-lg: 1200px;
+  --breakpoint-xl: 1440px;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+.nav-input-container {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+
+  input {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    flex: 1;
+    background-color: transparent;
+    padding-left: 0.5rem;
+  }
+
+  input:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  input::placeholder {
+    color: #999;
+  }
+
+  .search-icon {
+    color: #999;
+  }
+
+  .uk-flag {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
     border-radius: 50%;
   }
 
-  .account-button {
-    background-color: #FFC75F;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
+  .dropdown-toggle::after {
+    display: none;
   }
+}
 
-  .account-button i {
-    margin-right: 10px;
+/* ************ UTILITY CLASSES *************/
+
+.btn {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border: 0;
+  padding: 0.85em 1.7em;
+  border-radius: 7px;
+  font-size: var(--fs-200);
+  font-weight: var(--fw-regular);
+  text-align: center;
+  transition: all 300 ease-out;
+}
+
+.btn--rounded {
+  border-radius: 50px;
+}
+
+.btn--primary {
+  color: var(--clr-neutral-300);
+  background: var(--clr-primary-300);
+}
+
+.btn--primary:hover,
+.btn--primary:focus-visible {
+  background-color: var(--clr-primary-400);
+}
+
+.btn--accent {
+  background-color: var(--clr-secondary-300);
+  color: var(--clr-neutral-300);
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--clr-secondary-300);
+  border: 1px solid var(--clr-secondary-300);
+}
+.btn--outline-primary {
+  background-color: transparent;
+  color: var(--clr-primary-300);
+  border: 1px solid var(--clr-primary-300);
+}
+
+.icon-button {
+  background-color: #ffc75f;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.account-button {
+  background-color: #ffc75f;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.account-button i {
+  margin-right: 10px;
+}
+
+/********************* USER PROFILE ************** */
+.user-profile {
+  background-color: #dfe2e650;
+  height: calc(100vh - 115px);
+  display: flex;
+  gap: 0.8rem;
+}
+
+.sidebar {
+  margin-top: 0.6rem;
+  min-width: 300px;
+  background-color: #fff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-inline: 2rem;
+}
+
+.sidebar-nav {
+  /* outline: 1px solid red; */
+  margin-top: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.sidebar-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0;
+}
+
+.main-content {
+  border-radius: 10px;
+  background-color: #fff;
+  margin-top: 0.6rem;
+  width: 100%;
+  padding: 2rem;
+
+  display: flex;
+  gap: 1rem;
+}
+
+.user-profile__img {
+  background-color: #f9fafb;
+  width: 30%;
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.9rem;
+  height: 32rem;
+}
+
+.user-profile__form {
+  border-radius: 12px;
+  background-color: #f9fafb;
+  width: 70%;
+
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  height: 32rem;
+}
+
+.user-img {
+  /* outline: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+}
+.user-img img {
+  border-radius: 50%;
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  gap: 1.5rem;
+}
+
+.user-form input {
+  padding-block: 0.8rem;
+  border-radius: 10px;
+  border: 2px solid #0000001a;
+  padding-inline: 1rem;
+}
+
+.user-form button[type="submit"] {
+  align-self: center;
+}
+
+/****************  WISHLIST **********************/
+.wishlist .main-content {
+  flex-direction: column;
+
+  h2 {
+    font-size: 1.3rem;
+    color: #6d6d6d;
   }
+}
+
+.wrapper-wish {
+  background-color: #dfe2e650;
+  border-radius: 12px;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.wishlist-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clr-neutral-300);
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.wishlist-product-img {
+  width: 12rem;
+  height: 10em;
+  border-radius: 8px;
+  object-fit: cover;
+  align-items: center;
+  display: flex;
+
+  img {
+    border-radius: 8px;
+  }
+}
+
+.wishlist-product-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #6d6d6d;
+}
+
+.wishlist-product-reg-price {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  p {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+}
+
+.wishlist-product-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.wishlist-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 10rem;
+}
+
+.discount-rate {
+  background-color: #ffece6;
+  font-weight: bold;
+  font-size: 0.8rem;
+
+  border-radius: 3px;
+  padding-block: 5px;
+  padding-inline: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-primary-300);
+}
+
+.wishlist-sales-price {
+  font-size: 1.5rem;
+}

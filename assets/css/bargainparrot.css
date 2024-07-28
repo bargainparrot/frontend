@@ -154,10 +154,6 @@ ol[role="list"] {
   transition: all 300 ease-out;
 }
 
-.btn--rounded {
-  border-radius: 50px;
-}
-
 .btn--primary {
   color: var(--clr-neutral-300);
   background: var(--clr-primary-300);
@@ -182,6 +178,10 @@ ol[role="list"] {
   background-color: transparent;
   color: var(--clr-primary-300);
   border: 1px solid var(--clr-primary-300);
+}
+
+.btn--rounded {
+  border-radius: 50px;
 }
 
 .icon-button {
@@ -580,4 +580,123 @@ ol[role="list"] {
   height: 1px;
   background-color: #d3d3d3;
   display: flex;
+}
+
+/****************  ORDER HISTORY ******************/
+
+.order-cards-wrapper {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0.6rem;
+}
+.order-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-inline: 1rem;
+  padding-block: 0.6rem;
+}
+.order-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-inline: 1rem;
+  padding-block: 0.6rem;
+  background-color: #e0e0e0;
+  font-weight: 600;
+}
+
+.order-card-odd {
+  background-color: #fafafa;
+}
+.order-card-even {
+  background-color: #fff;
+}
+
+.order-card-img {
+  width: 4rem;
+  border-radius: 8px;
+  object-fit: cover;
+  align-items: center;
+  display: flex;
+
+  img {
+    border-radius: 8px;
+  }
+}
+
+.order-status {
+  padding-inline: 1.5rem;
+  padding-block: 0.55rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875rem;
+  border-radius: 50px;
+}
+.status--pending {
+  background: #f2bb203d;
+  color: #ffc120;
+}
+.status--received {
+  background: #02b4ac1a;
+
+  color: #02b4ac;
+}
+.status--cancelled {
+  background: #e647483d;
+
+  color: #e64748;
+}
+
+.order-summary-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: #fff;
+  padding: 0.65rem;
+  border-radius: 8px;
+
+  & > div {
+    width: 100%;
+  }
+}
+
+.order-summary-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border-radius: 8px;
+  padding: 1rem;
+
+  .summary-fig {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  .summary-title {
+    font-size: 0.875rem;
+  }
+}
+.total-orders {
+  background: #0052b41a;
+  color: #6494f8;
+}
+
+.received-orders {
+  background: #02b4ac1a;
+  color: #02b4ac;
+}
+
+.hold-orders {
+  background: #ffc1201a;
+  color: #ffc120;
+}
+
+.cancelled-orders {
+  background: #e647481a;
+  color: #e64748;
 }

@@ -700,3 +700,311 @@ ol[role="list"] {
   background: #e647481a;
   color: #e64748;
 }
+
+/**************** ACCOUNT SETTINGS **********************/
+.account-settings .main-content {
+  flex-direction: column;
+
+  h2 {
+    font-size: 1.3rem;
+    color: #6d6d6d;
+  }
+  .main-content-wrapper {
+    background-color: #fff;
+    padding-inline: 0;
+    /* outline: 1px solid red; */
+    /* width: 90%; */
+  }
+}
+
+.setting-box {
+  background-color: #fafafa;
+
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #d3d3d3;
+  }
+}
+
+/**************** EDIT PROFILE FORM **********************/
+
+.edit-profile-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  padding: 20px;
+  text-align: center;
+
+  .profile-header {
+    margin-bottom: 20px;
+  }
+
+  .profile-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+  }
+
+  .profile-form {
+    text-align: left;
+  }
+
+  .profile-image {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .profile-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .form-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .update-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff4500;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .update-button:hover {
+    background-color: #e03e00;
+  }
+}
+
+dialog {
+  display: flex;
+  justify-content: center;
+  margin-inline: auto;
+  margin-block: auto;
+}
+
+/*   Open state of the dialog  */
+dialog[open] {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+/*   Closed state of the dialog   */
+dialog {
+  opacity: 0;
+  transform: scaleY(0);
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out,
+    overlay 0.2s ease-out allow-discrete, display 0.2s ease-out allow-discrete;
+  /* Equivalent to
+  transition: all 0.7s allow-discrete; */
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0%);
+  transition: display 0.2s allow-discrete, overlay 0.2s allow-discrete,
+    background-color 0.2s;
+  /* Equivalent to
+  transition: all 0.7s allow-discrete; */
+}
+
+dialog[open]::backdrop {
+  background-color: rgb(0 0 0 / 25%);
+}
+
+/**************** ADD CARD DIALOG **********************/
+
+.add-card-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  padding: 20px;
+  text-align: center;
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .card-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+  }
+
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .card-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .card-icons img {
+    width: 40px;
+    height: auto;
+  }
+
+  form {
+    text-align: left;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group-inline {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .form-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .form-group-inline .form-group input {
+    width: calc(100% - 20px);
+  }
+
+  .continue-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff4500;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .continue-button:hover {
+    background-color: #e03e00;
+  }
+
+  .form-group-checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .form-group-checkbox input {
+    margin-right: 10px;
+  }
+
+  .privacy-note {
+    font-size: 12px;
+    color: #888;
+    margin-top: 15px;
+    text-align: left;
+  }
+}
+
+/**************** EDIT PASSWORD **********************/
+
+.edit-password-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  padding: 20px;
+  text-align: center;
+
+  .password-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .password-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+  }
+
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  form {
+    text-align: left;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .form-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .update-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff4500;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .update-button:hover {
+    background-color: #e03e00;
+  }
+}

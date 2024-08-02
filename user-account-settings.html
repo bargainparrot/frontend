@@ -135,7 +135,7 @@
       </nav>
       <!--END TOP NAV-->
     </div>
-    <main class="user-profile">
+    <main class="user-profile account-settings">
       <section class="sidebar">
         <nav class="sidebar-nav">
           <ul role="list">
@@ -159,75 +159,71 @@
       </section>
 
       <section class="main-content">
-        <div class="user-profile__img">
-          <div class="user-img">
-            <img src="././assets//img//user-img.png" alt="" />
-          </div>
-          <h4>e.g Jane Doe</h4>
-          <button
-            type="button"
-            class="btn btn--primary"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-          >
-            <i class="fa-solid fa-pencil"></i>Change picture
-          </button>
-        </div>
-        <div class="user-profile__form">
+        <h2>Order History</h2>
+
+        <div class="main-content-wrapper">
           <div>
-            <form class="user-form">
-              <input type="text" placeholder="Jane Doe" />
-              <input type="text" placeholder="example@gmail.com" />
-              <input type="text" placeholder="080123456789" />
-              <input type="text" placeholder="Home Address" />
-              <button class="btn btn--primary" type="button" id="show-dialog">
-                <i class="fa-solid fa-pencil"></i>Edit Details
-              </button>
-            </form>
+            <div class="setting-box">
+              <span>Two-factor authentication(2FA)</span>
+              <span><input type="checkbox" /></span>
+            </div>
+            <div class="setting-box">
+              <span id="show-dialog">Change password</span>
+              <span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </span>
+            </div>
+          </div>
+          <div class="setting-box">
+            <span>Manage Alert</span>
+            <span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </span>
+          </div>
+          <div>
+            <div class="setting-box">
+              <span>Privacy Policy</span>
+            </div>
+            <div class="setting-box">
+              <span>Legal Information</span>
+            </div>
           </div>
         </div>
       </section>
 
       <dialog id="dialog">
-        <div class="edit-profile-container">
-          <div class="profile-header">
-            <h2>Add your profile details</h2>
+        <div class="edit-password-container">
+          <div class="password-header">
+            <h2>Change Password</h2>
+            <button class="close-button" id="close-dialog">&times;</button>
           </div>
-          <div class="profile-form">
-            <div class="profile-image">
-              <img src="profile-image-placeholder.png" alt="Profile Image" />
+          <form>
+            <div class="form-group">
+              <label for="old-password">Old Password</label>
+              <input
+                type="password"
+                id="old-password"
+                placeholder="E.g Jane Doe"
+              />
             </div>
-            <button id="close-dialog">X</button>
-            <form>
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" placeholder="E.g Jane Doe" />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  placeholder="E.g example@gmail.com"
-                />
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" placeholder="E.g 081234567890" />
-              </div>
-              <div class="form-group">
-                <label for="address">Home Address</label>
-                <input
-                  type="text"
-                  id="address"
-                  placeholder="E.g Lagos, Nigeria"
-                />
-              </div>
-              <button type="submit" class="update-button">
-                Update Details
-              </button>
-            </form>
-          </div>
+            <div class="form-group">
+              <label for="new-password">New Password</label>
+              <input
+                type="password"
+                id="new-password"
+                placeholder="E.g example@gmail.com"
+              />
+            </div>
+            <div class="form-group">
+              <label for="confirm-password">Confirm New Password</label>
+              <input
+                type="password"
+                id="confirm-password"
+                placeholder="E.g 081234567890"
+              />
+            </div>
+            <button type="submit" class="update-button">Update Details</button>
+          </form>
         </div>
       </dialog>
     </main>

@@ -161,7 +161,9 @@
       <section class="main-content">
         <div class="wallet-heading">
           <h2>Wallet</h2>
-          <button class="btn btn--primary card-add-btn">Add card</button>
+          <button class="btn btn--primary card-add-btn" id="show-dialog">
+            Add card
+          </button>
         </div>
 
         <div class="main-content-wrapper">
@@ -209,8 +211,62 @@
           </div>
         </div>
       </section>
+
+      <dialog id="dialog">
+        <div class="add-card-container">
+          <div class="card-header">
+            <h2>Add Card</h2>
+            <button class="close-button" id="close-dialog">&times;</button>
+          </div>
+          <div class="card-icons">
+            <img src="mastercard.png" alt="MasterCard" />
+            <img src="visa.png" alt="Visa" />
+          </div>
+          <form>
+            <div class="form-group">
+              <label for="card-name">Card Name</label>
+              <input type="text" id="card-name" placeholder="Card name" />
+            </div>
+            <div class="form-group">
+              <label for="card-number">Card Number</label>
+              <input
+                type="text"
+                id="card-number"
+                placeholder="1234 6664 3556 3445"
+              />
+            </div>
+            <div class="form-group-inline">
+              <div class="form-group">
+                <label for="expiration-date">Expiration Date</label>
+                <input type="text" id="expiration-date" placeholder="MM/YY" />
+              </div>
+              <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="***" />
+              </div>
+            </div>
+            <button type="submit" class="continue-button">
+              Continue Shopping
+            </button>
+            <div class="form-group-checkbox">
+              <input type="checkbox" id="confirm" />
+              <label for="confirm"
+                >Confirm that you want to add this card</label
+              >
+            </div>
+            <div class="privacy-note">
+              <p>
+                Your personal data will be used to process your payment, support
+                your experience throughout this website and for other purposes
+                described in our privacy policy.
+              </p>
+            </div>
+          </form>
+        </div>
+      </dialog>
     </main>
 
+    <script src="./script/index.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery-3.7.1.min.js"></script>
   </body>
